@@ -15,6 +15,7 @@ $(document).ready(function() {
   var path = d3.geo.path()
     .projection(projection);
   var g = svg.append("g");
+  //world map
   d3.json("world-110m2.json", function (error, topology) {
     g.selectAll("path")
     .data(topojson.object(topology, topology.objects.countries).geometries)
